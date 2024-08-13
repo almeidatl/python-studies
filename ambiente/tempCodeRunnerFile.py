@@ -1,1 +1,1 @@
-listaInvertida
+CompareTriplets.compare()

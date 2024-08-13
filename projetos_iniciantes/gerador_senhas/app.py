@@ -1,15 +1,9 @@
-# criar um programa gerador de senhas
-
-# o programa irá de forma aleatória escolher caracteres até que as condicoes de senha sejam atendidas
-
 import random as r
 
 lowercase = 'abcdefghijklmnopqrstuvwxyz'
 uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 number = '0123456789'
 special = '!#$%&@*'
-
-# define as condicoes de senha
 
 length = 12
 has_lowercase = 0
@@ -20,8 +14,6 @@ has_special = 0
 pass_caracteres = []
 
 while len(pass_caracteres) < length:
-    
-    
 
     if has_lowercase < 3:
         pass_caracteres.append(r.choice(lowercase))
@@ -39,14 +31,12 @@ while len(pass_caracteres) < length:
         pass_caracteres.append(r.choice(special))
         has_special += 1
 
-# print(pass_caracteres)
 r.shuffle(pass_caracteres)
 
 def FinalPass():
-    password = ''
-    for i in pass_caracteres:
-        password += i
+    password = ''.join(pass_caracteres)
     return password
 
-
-print(f'Senha: {FinalPass()}')
+print()
+print(f'Senha gerada: {FinalPass()}')
+print()

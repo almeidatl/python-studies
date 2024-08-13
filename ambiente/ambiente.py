@@ -1,26 +1,31 @@
-# dicionario de carros
 
-carros = {
-    "Mustang": {
-        "ano": 1964,
-        "fabricante": "Ford",
-        "preco": 25000.00
-    },
-    "Corvette": {
-        "ano": 1972,
-        "fabricante": "Chevrolet",
-        "preco": 35000.00
-    },
-    "Fusca": {
-        "ano": 1969,
-        "fabricante": "Ford",
-        "preco": 18000.00
-    },
-    "Camaro": {
-        "ano": 1975,
-        "fabricante": "Chevrolet",
-        "preco": 40000.00
-    }
-}
 
-print(carros.values())
+import math
+import os
+import random
+import re
+import sys
+
+#
+# Complete the 'simpleArraySum' function below.
+#
+# The function is expected to return an INTEGER.
+# The function accepts INTEGER_ARRAY ar as parameter.
+#
+
+def simpleArraySum(ar):
+    # Write your code here
+    return sum(ar)
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    ar_count = int(input().strip())
+
+    ar = list(map(int, input().rstrip().split()))
+
+    result = simpleArraySum(ar)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()

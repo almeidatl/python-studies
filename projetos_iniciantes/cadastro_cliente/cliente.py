@@ -2,7 +2,6 @@ import sqlite3
 import os
 import csv
 
-
 class Cliente:
     def __init__(self, nome, sobrenome, telefone, email, endereco):
         self.nome = nome
@@ -49,7 +48,6 @@ class Cliente:
         finally:
             conexao.close()
 
-    @staticmethod
     def exportar_para_csv():
         try:
             # Obtém o caminho absoluto do diretório atual

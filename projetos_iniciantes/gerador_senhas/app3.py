@@ -38,6 +38,4 @@ password50 = Generator(50, 10).generate_password()
 
 print(f'**'*30)
 print(f'Password 12 characters: {password12}')
-print(f'Password 24 characters: {password24}')
-print(f'Password 50 characters: {password50}')
 print(f'**'*30)
